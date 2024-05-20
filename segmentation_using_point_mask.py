@@ -582,12 +582,12 @@ unet.summary()
 
 # Commented out IPython magic to ensure Python compatibility.
 # %%time
-# with tf.device("/GPU:0"):
-#   results = unet.fit(
-#       X, y,
-#       epochs=100,
-#       callbacks=callbacks,
-#       validation_split=0.1,
-#       batch_size=16
-#   )
+ with tf.device("/GPU:0"):
+   results = unet.fit(
+       X, y,
+       epochs=100,
+       callbacks=callbacks,
+       validation_split=0.1,
+       batch_size=16
+   )
 
